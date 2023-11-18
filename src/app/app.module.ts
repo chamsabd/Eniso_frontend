@@ -20,6 +20,7 @@ import {
   NbToastrModule,
   NbWindowModule,
 } from '@nebular/theme';
+//import { StudentManagmentComponent } from './student-management/student-management.component';
 
 @NgModule({
   declarations: [AppComponent],
