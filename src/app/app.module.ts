@@ -13,6 +13,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import {
   NbChatModule,
+  NbButtonModule,
   NbDatepickerModule,
   NbDialogModule,
   NbMenuModule,
@@ -21,10 +22,12 @@ import {
   NbWindowModule,
 } from '@nebular/theme';
 //import { StudentManagmentComponent } from './student-management/student-management.component';
-
+import { Ng2SmartTableModule } from 'ng2-smart-table';
 @NgModule({
   declarations: [AppComponent],
   imports: [
+    NbButtonModule,
+    Ng2SmartTableModule,
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,

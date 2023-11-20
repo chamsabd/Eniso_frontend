@@ -4,8 +4,6 @@
  * Licensed under the MIT License. See License.txt in the project root for license information.
  */
 import { Component, OnInit } from '@angular/core';
-import { AnalyticsService } from './@core/utils/analytics.service';
-import { SeoService } from './@core/utils/seo.service';
 import { MENU_ITEMS } from './app-menu';
 
 @Component({
@@ -17,12 +15,10 @@ import { MENU_ITEMS } from './app-menu';
 })
 export class AppComponent implements OnInit {
   menu = MENU_ITEMS;
-  constructor(private analytics: AnalyticsService, private seoService: SeoService) {
+  constructor() {
   }
 
   ngOnInit(): void {
-    
-    this.analytics.trackPageViews();
-    this.seoService.trackCanonicalChanges();
+
   }
 }

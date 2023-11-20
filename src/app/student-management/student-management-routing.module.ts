@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { StudentManagmentComponent } from './student-management.component';
 import { MatiereComponent } from './matiere/matiere.component';
+import { ButtonViewComponent } from './button-view.component';
 
 
 const routes: Routes = [{
@@ -27,5 +28,6 @@ export class StudentManagmentRoutingModule { }
 export const routedComponents = [
   StudentManagmentComponent,
   MatiereComponent,
+  ButtonViewComponent
   
 ];
