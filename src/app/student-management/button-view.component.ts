@@ -1,14 +1,13 @@
 import { ViewCell } from 'ng2-smart-table';
 
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'button-view',
   template: `
   <button nbButton outline (click)="onClick()" [status]="btn.class">{{btn.title}}</button>
   `,
 })
-export class ButtonViewComponent implements ViewCell {
+export class ButtonViewComponent implements ViewCell,OnInit {
   renderValue: string;
 btn:any;
   @Input() value: string ;

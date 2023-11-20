@@ -19,6 +19,6 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
+    console.log('Le composant app a été initialisé.');
   }
 }

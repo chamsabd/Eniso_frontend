@@ -12,6 +12,17 @@
     margin: 0.5rem;
   }
 
+:host ::ng-deep {
+  ng2-st-tbody-edit-delete {
+    display: none;
+    height: 0 !important;
+  }
+
+  ng2-st-tbody-custom {
+    display: flex;
+    text-align: center;
+  }
+}
 }
 // :host ::ng-deep ng2-st-tbody-edit-delete {
 //   display: flex !important;
@@ -28,15 +39,3 @@
 // :host ::ng-deep ng2-st-tbody-custom a.ng2-smart-action.ng2-smart-action-custom-custom:hover {
 //   color: #5dcfe3;
 // }
-
-:host ::ng-deep {
-  ng2-st-tbody-edit-delete {
-    display: none;
-    height: 0 !important;
-  }
-
-  ng2-st-tbody-custom {
-    display: flex;
-    text-align: center;
-  }
-}
