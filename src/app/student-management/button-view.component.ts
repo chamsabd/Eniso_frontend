@@ -6,7 +6,6 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   selector: 'button-view',
   template: `
   <button nbButton outline (click)="onClick()" [status]="btn.class">{{btn.title}}</button>
-   
   `,
 })
 export class ButtonViewComponent implements ViewCell {
@@ -18,10 +17,8 @@ btn:any;
   @Output() save: EventEmitter<any> = new EventEmitter();
 
   ngOnInit() {
-  
-    
+
     this.btn=JSON.parse(this.value);
-    console.log("btn  "+ this.btn);
     this.renderValue = this.value.toString().toUpperCase();
   }
 

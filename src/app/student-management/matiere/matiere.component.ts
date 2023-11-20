@@ -63,7 +63,7 @@ export class MatiereComponent {
     },
       renderComponent: ButtonViewComponent,
       onComponentInitFunction(instance) {
-        console.log(instance);
+       
         
         instance.save.subscribe(row => {
           alert(`${row.id} saved!`)
