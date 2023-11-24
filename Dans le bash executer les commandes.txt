@@ -1,0 +1,7 @@
+/////Dans le bash executer les commandes ci dessous:
+
+
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
+nvm install 14.21.3 
+nvm use 14.21.3 
+npm install
