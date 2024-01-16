@@ -12,10 +12,15 @@ export const MENU_ITEMS: NbMenuItem[] = [
   //   icon: 'home-outline',
   //   link: '/pages/iot-dashboard',
   // },
-  {
+   {
+        title: 'Dashboard',
+        icon: 'home-outline',
+        link: '/student/dashboard',
+      },{
       title: 'matiere',
       icon: 'keypad-outline',
-      link: '/student/matiere',}
+      link: '/student/matiere',},
+     
   // {
   //   title: 'FEATURES',
   //   group: true,
