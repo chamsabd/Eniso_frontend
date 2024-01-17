@@ -1,13 +1,15 @@
 import {Component, OnDestroy} from '@angular/core';
 import { NbThemeService } from '@nebular/theme';
+
 import { takeWhile } from 'rxjs/operators' ;
+
 
 interface CardSettings {
   title: string;
   iconClass: string;
   type: string;
+  number:number
 }
-
 @Component({
   selector: 'ngx-dashboard',
   styleUrls: ['./dashboard.component.scss'],
@@ -16,27 +18,32 @@ interface CardSettings {
 export class DashboardComponent implements OnDestroy {
 
   private alive = true;
+   //statusCards =[{title:"Students Number",iconClass:"people-outline",number:"500"},{title:"Profs Number",iconClass:"people-outline",number:"200"},{title:"Admins Number",iconClass:"people-outline",number:"10"},{title:"Subjects Number",iconClass:"book-outline",number:"300"}]
 
-  solarValue: number;
+ 
   lightCard: CardSettings = {
-    title: 'Light',
-    iconClass: 'nb-lightbulb',
+    title: 'Students Number',
+    iconClass: 'people-outline',
     type: 'primary',
+    number: 500
   };
   rollerShadesCard: CardSettings = {
-    title: 'Roller Shades',
-    iconClass: 'nb-roller-shades',
+    title: 'Profs Number',
+    iconClass: 'people-outline',
     type: 'success',
+    number: 200
   };
   wirelessAudioCard: CardSettings = {
-    title: 'Wireless Audio',
-    iconClass: 'nb-audio',
+    title: 'Admins Number',
+    iconClass: 'people-outline',
     type: 'info',
+    number:10
   };
   coffeeMakerCard: CardSettings = {
-    title: 'Coffee Maker',
-    iconClass: 'nb-coffee-maker',
+    title: 'Subjects Number',
+    iconClass: 'book-outline',
     type: 'warning',
+    number:300
   };
 
   statusCards: string;
@@ -77,19 +84,18 @@ export class DashboardComponent implements OnDestroy {
     dark: this.commonStatusCardsSet,
   };
 
-  constructor(private themeService: NbThemeService,
-             ) {
-    this.themeService.getJsTheme()
+
+   
+  constructor(private themeService: NbThemeService
+    ) {
+      this.themeService.getJsTheme()
       .pipe(takeWhile(() => this.alive))
       .subscribe(theme => {
         this.statusCards = this.statusCardsByThemes[theme.name];
     });
 
-   
-        this.solarValue = 5;
-    
-  }
 
+}
   ngOnDestroy() {
     this.alive = false;
   }

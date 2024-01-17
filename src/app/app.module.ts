@@ -23,9 +23,9 @@ import {
 } from '@nebular/theme';
 //import { StudentManagmentComponent } from './student-management/student-management.component';
 import { Ng2SmartTableModule } from 'ng2-smart-table';
-import { DepartmentComponent } from './student-managment/department/department.component';
+
 @NgModule({
-  declarations: [AppComponent, DepartmentComponent],
+  declarations: [AppComponent],
   imports: [
     NbButtonModule,
     Ng2SmartTableModule,

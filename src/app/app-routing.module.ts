@@ -8,16 +8,21 @@ import {
   NbRequestPasswordComponent,
   NbResetPasswordComponent,
 } from '@nebular/auth';
+import { AuthGuard } from './auth.guard';
 
 export const routes: Routes = [
   {
     path: 'student',
+    
     loadChildren: () => import('./student-management/student-management.module')
       .then(m => m.StudentManagmentModule),
+      canActivate: [AuthGuard],
+     
   },
   {
     path: 'auth',
     component: NbAuthComponent,
+
     children: [
       {
         path: '',
@@ -26,6 +31,8 @@ export const routes: Routes = [
       {
         path: 'login',
         component: NbLoginComponent,
+      
+        
       },
       {
         path: 'register',
@@ -45,8 +52,9 @@ export const routes: Routes = [
       },
     ],
   },
-  { path: '', redirectTo: 'student', pathMatch: 'full' },
-  { path: '**', redirectTo: 'login' },
+  { path: '', redirectTo:'student',pathMatch:"full"},
+  { path: '**', redirectTo: 'auth/login' },
+ 
 ];
 
 const config: ExtraOptions = {
