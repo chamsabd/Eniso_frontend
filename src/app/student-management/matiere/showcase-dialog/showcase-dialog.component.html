@@ -1,0 +1,44 @@
+<nb-card>
+  <nb-card-header>Prof details</nb-card-header>
+  <nb-card-body>
+
+
+   
+      <div class="form-group row">
+        <label for="inputEmail1" class="label col-sm-4 col-form-label">ncin</label>
+        <div class="col-sm-9">
+          <p>{{prof.ncin}}</p>
+         </div>
+      </div>
+      <div class="form-group row">
+        <label for="inputPassword2" class="label col-sm-4 col-form-label">nom</label>
+        <div class="col-sm-9">
+          <p>{{prof.nom}}</p>
+          </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-4 label">prenom</label>
+        <div class="col-sm-9">
+         <p>{{prof.prenom}}</p>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-4 label">email</label>
+        <div class="col-sm-9">
+         <p>{{prof.email}}</p>
+        </div>
+      </div>
+   
+      <div class="form-group row">
+        <label class="col-sm-4 label">departement</label>
+        <div class="col-sm-9">
+         <p>{{prof.departement.titre}}</p>
+        </div>
+      </div>
+   
+
+  </nb-card-body>
+  <nb-card-footer>
+    <button nbButton hero status="primary" (click)="dismiss()">Close</button>
+  </nb-card-footer>
+</nb-card>

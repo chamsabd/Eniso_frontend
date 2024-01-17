@@ -1,0 +1,27 @@
+<nb-card>
+    <nb-card-header>
+      departments
+    </nb-card-header>
+    <nb-card-body>
+      <div class="row" style="margin: auto;">
+        <div style="margin: auto;" class="accordion-container col-xl-12 col-lg-6 col-xxxl-6" >
+          <nb-accordion >
+            <nb-accordion-item *ngFor="let dep of data">
+              <nb-accordion-item-header >
+                {{dep.titre}}
+              </nb-accordion-item-header>
+              <nb-accordion-item-body  class="buttons-row">
+                <button nbButton outline (click)="onclick(dep.id,1)" status="primary" shape="round">1er</button>
+                <button nbButton outline (click)="onclick(dep.id,2)" status="primary" shape="round">2eme</button>
+                <button nbButton outline (click)="onclick(dep.id,3)" status="primary" shape="round">3eme</button>
+              </nb-accordion-item-body>
+            </nb-accordion-item>
+    
+          </nb-accordion>
+      
+        </div>
+      </div>
+    </nb-card-body>
+  
+  </nb-card>
+  

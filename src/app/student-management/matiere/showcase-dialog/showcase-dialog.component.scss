@@ -1,0 +1,11 @@
+@import '../../../@theme/styles/themes';
+
+@include nb-install-component() {
+  nb-card {
+    max-width:fit-content;
+    max-height:fit-content;
+  }
+  table, th, td{
+    border: 3px black;
+  }
+}

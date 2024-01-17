@@ -23,6 +23,7 @@ import {
 } from '@nebular/theme';
 //import { StudentManagmentComponent } from './student-management/student-management.component';
 import { Ng2SmartTableModule } from 'ng2-smart-table';
+
 @NgModule({
   declarations: [AppComponent],
   imports: [
